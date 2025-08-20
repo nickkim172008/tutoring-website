@@ -1,0 +1,62 @@
+/* Reset basic styling */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* Page container */
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #1e40af;
+}
+body { font-family: Arial, sans-serif; margin: 32px; line-height: 1.6; }
+nav { display: flex; gap: 16px; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+hr { margin: 16px 0 24px; }
+main { max-width: 800px; }
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.testimonial-card {
+  flex: 1 1 250px;
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+}

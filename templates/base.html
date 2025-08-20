@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}My Tutoring Site{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<footer style="text-align: center; padding: 20px; color: #6b7280;">
+  © {{ now.year }} My Tutoring Site
+</footer>
+<body>
+  <!-- ✅ Navbar -->
+  <nav style="background: #f5f5f5; padding: 10px;">
+    <a href="/">Home</a> |
+    <a href="/about">About</a> |
+    <a href="/contact">Contact</a> |
+    <a href="/messages">Messages</a>
+  </nav>
+
+  <div class="content"></div>
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Subjects{% endblock %}
+{% block content %}
+  <h1>Subjects I Tutor</h1>
+  <ul>
+    {% for subject in subjects %}
+      <li>
+        <strong>{{ subject.name }}</strong>: {{ subject.description }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
