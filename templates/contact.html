@@ -1,14 +1,40 @@
 {% extends "base.html" %}
-{% block title %}Contact{% endblock %}
+{% block title %}Contact - Nicholas Kim Tutoring{% endblock %}
+
 {% block content %}
-  <h1>Contact Me</h1>
-  <form method="POST" action="/contact" class="contact-form">
-    <label for="name">Your Name</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+<section class="mt-10 grid md:grid-cols-2 gap-10">
+  <div>
+    <h1 class="text-3xl font-extrabold tracking-tight">Contact</h1>
+    <p class="mt-4 text-gray-700">
+      Have questions or want to book a free consultation? Send me a message and I’ll get back to you shortly.
+    </p>
 
-    <label for="message">Message</label><br>
-    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+    <form method="post" class="mt-6 space-y-4 contact-form">
+      <div>
+        <label for="name" class="block text-sm font-medium">Your Name</label>
+        <input id="name" name="name" type="text" required />
+      </div>
 
-    <button type="submit">Send</button>
-  </form>
+      <div>
+        <label for="email" class="block text-sm font-medium">Your Email (optional)</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="cta-button">Send Message</button>
+    </form>
+  </div>
+
+  <div class="space-y-6">
+    <img src="https://placehold.co/800x520?text=Contact+Image" alt="Contact placeholder" class="rounded-2xl border shadow-sm w-full" />
+    <div class="card">
+      <h2 class="font-semibold">Availability</h2>
+      <p class="mt-2">Evenings and weekends. Online across Ontario; in-person in Etobicoke.</p>
+    </div>
+  </div>
+</section>
 {% endblock %}

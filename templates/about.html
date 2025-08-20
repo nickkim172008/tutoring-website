@@ -1,6 +1,56 @@
 {% extends "base.html" %}
-{% block title %}About - My Tutoring Site{% endblock %}
+{% block title %}About - Nicholas Kim Tutoring{% endblock %}
+
 {% block content %}
-  <h1>About Me</h1>
-  <p>Hi, I’m [Your Name]. I help students learn with clear explanations, practice, and feedback.</p>
+<section class="mt-10 max-w-3xl mx-auto">
+  <h1 class="text-3xl md:text-4xl font-extrabold">About Me</h1>
+  <p class="mt-4 text-lg text-gray-700">
+    Hi, I’m Nicholas 👋 I’m a Grade 12 AP student with a passion for helping younger students succeed in math.
+    I’ve completed Ontario’s most advanced math courses early, earning <strong>100% in both Advanced Functions
+    and Calculus</strong>, and a <strong>5/5 on the AP Calculus AB exam</strong>.
+  </p>
+  <p class="mt-4 text-lg text-gray-700">
+    With over <em>200 hours of tutoring experience</em>, I focus on making math clear and approachable,
+    while building student confidence step by step.
+  </p>
+  <p class="mt-4 text-lg text-gray-700">
+    Outside academics, I enjoy going to the gym, hanging out with friends, and playing instruments 🎸🥁.
+  </p>
+</section>
+
+<!-- FAQ Section -->
+<section class="mt-16 max-w-3xl mx-auto">
+  <h2 class="text-2xl font-bold">❓ Frequently Asked Questions</h2>
+  <div class="mt-6 space-y-4">
+    <details class="rounded-lg border bg-white px-5 py-4 shadow-sm">
+      <summary class="font-semibold cursor-pointer">What grade levels do you tutor?</summary>
+      <p class="mt-2 text-gray-600">
+        I work with students from Grades 6–12, following the Ontario curriculum—from elementary arithmetic
+        to advanced high school math and Calculus.
+      </p>
+    </details>
+
+    <details class="rounded-lg border bg-white px-5 py-4 shadow-sm">
+      <summary class="font-semibold cursor-pointer">Do you offer online and in-person sessions?</summary>
+      <p class="mt-2 text-gray-600">
+        Yes! I tutor online using Zoom + iPad + Apple Pencil for interactive lessons. 
+    </details>
+
+    <details class="rounded-lg border bg-white px-5 py-4 shadow-sm">
+      <summary class="font-semibold cursor-pointer">How do payments work?</summary>
+      <p class="mt-2 text-gray-600">
+        Payments are arranged directly with families. I typically accept e‑transfer, but I’m flexible—
+        we can use whatever’s easiest for you.
+      </p>
+    </details>
+
+    <details class="rounded-lg border bg-white px-5 py-4 shadow-sm">
+      <summary class="font-semibold cursor-pointer">Do you provide homework help?</summary>
+      <p class="mt-2 text-gray-600">
+        Absolutely! I help with day‑to‑day assignments, EQAO prep, quizzes, and exams, plus study strategies
+        to reduce stress and build confidence.
+      </p>
+    </details>
+  </div>
+</section>
 {% endblock %}

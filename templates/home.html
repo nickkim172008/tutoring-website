@@ -1,43 +1,124 @@
 {% extends "base.html" %}
+{% block title %}Home - Nicholas Kim Tutoring{% endblock %}
+
 {% block content %}
-<!-- Hero Section -->
-<section class="hero" style="text-align: center; padding: 60px 20px; background-color: #f0f8ff;">
-  <h1 style="font-size: 3em; margin-bottom: 0.5em;">Master Math with Confidence</h1>
-  <p style="font-size: 1.3em; color: #555;">One-on-one tutoring for Grades 1–12 in Ontario — online or in-person.</p>
-  <a href="/contact" style="display: inline-block; margin-top: 20px; padding: 12px 25px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px;">Book Your Free Session</a>
+<!-- HERO -->
+<section class="mt-10">
+  <div class="grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">
+        Master Math with Confidence
+      </h1>
+      <p class="mt-4 text-lg text-gray-700">
+        One2one online math tutoring for Grades 6–12 across Ontario.
+      </p>
+      <div class="mt-6 flex gap-3">
+        <a href="{{ url_for('contact') }}" class="inline-flex items-center rounded-lg bg-brand-600 px-5 py-3 text-white hover:bg-brand-700">
+          📅 Book Your Free Consultation
+        </a>
+        <a href="{{ url_for('services') }}" class="inline-flex items-center rounded-lg border px-5 py-3 hover:bg-gray-50">
+          See Services
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-gray-500">30-minute intro session. No cost, no commitment.</p>
+    </div>
+
+    <!-- Image placeholder -->
+    <div class="relative">
+      <img src="https://placehold.co/800x520?text=Tutoring+Hero+Image" alt="Tutoring illustration placeholder" class="rounded-2xl border shadow-sm w-full" />
+      <div class="absolute -bottom-4 -left-4 bg-white rounded-xl border shadow p-4 hidden md:block">
+        <p class="text-sm font-semibold">Ontario Curriculum Aligned</p>
+        <p class="text-xs text-gray-600">Grade 6 to 12</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- About Preview Section -->
-<section style="padding: 50px 20px; max-width: 800px; margin: auto;">
-  <h2>Hi, I'm [Nicholas Kim]</h2>
-  <p>
-    I'm a dedicated math tutor helping students from Grades 1–12 gain confidence and improve their skills. Whether it's arithmetic or advanced functions, I adapt to each student's learning style and pace. I'm based in Ontario and offer flexible online or in-person sessions.
-  </p>
-  <a href="/about" style="color: #007bff;">Learn more about me →</a>
+<!-- SERVICES SNAPSHOT -->
+<section class="mt-16 services py-12 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-2xl md:text-3xl font-bold text-center">📚 Services Snapshot</h2>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-8">
+      <!-- Elementary Math -->
+      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition">
+        <img src="{{ url_for('static', filename='images/elementary.png') }}" alt="Middle School Math" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold">📘 Middle School Math (Grades 6–8)</h3>
+          <p class="mt-2 text-gray-600">Build strong foundations & problem‑solving skills.</p>
+        </div>
+      </div>
+
+      <!-- High School Math -->
+      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition">
+        <img src="{{ url_for('static', filename='images/highschool.png') }}" alt="High School Math" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold">📐 High School Math (Grades 9–12)</h3>
+          <p class="mt-2 text-gray-600">Algebra, functions, trigonometry, calculus & more.</p>
+        </div>
+      </div>
+
+      <!-- Homework Help & Test Prep -->
+      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition">
+        <img src="{{ url_for('static', filename='images/homework.png') }}" alt="Homework Help & Test Prep" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold">📝 Homework Help & Test Prep</h3>
+          <p class="mt-2 text-gray-600">Exams and assignments.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="{{ url_for('contact') }}" class="inline-block bg-brand-600 text-white px-6 py-3 rounded-lg shadow hover:bg-brand-700 transition">
+        See All Services →
+      </a>
+    </div>
+  </div>
 </section>
 
-<!-- Services Section -->
-<section style="padding: 50px 20px; background-color: #f9f9f9;">
-  <h2 style="text-align: center;">Tutoring Services</h2>
-  <ul style="max-width: 600px; margin: 20px auto; list-style: none; padding: 0;">
-    <li style="padding: 10px;">📘 Math for Grades 1–8 (Foundations, Fractions, Word Problems)</li>
-    <li style="padding: 10px;">📗 High School Math: Algebra, Functions, Trigonometry, Calculus</li>
-    <li style="padding: 10px;">📙 Homework Help & Test Prep (EQAO, quizzes, finals)</li>
-    <li style="padding: 10px;">📕 Based on the Ontario Curriculum</li>
-  </ul>
+<!-- HOW IT WORKS -->
+<section class="mt-16">
+  <h2 class="text-2xl font-bold">⚙️ How It Works</h2>
+  <ol class="mt-6 grid md:grid-cols-3 gap-6">
+    <li class="rounded-2xl border bg-white p-6">
+      <span class="text-sm text-gray-500">Step 1</span>
+      <h3 class="mt-1 font-semibold">Free Consultation</h3>
+      <p class="mt-2 text-gray-600">We’ll talk about your child’s needs and goals.</p>
+    </li>
+    <li class="rounded-2xl border bg-white p-6">
+      <span class="text-sm text-gray-500">Step 2</span>
+      <h3 class="mt-1 font-semibold">Personalized Plan</h3>
+      <p class="mt-2 text-gray-600">Lessons tailored to their pace and challenges.</p>
+    </li>
+    <li class="rounded-2xl border bg-white p-6">
+      <span class="text-sm text-gray-500">Step 3</span>
+      <h3 class="mt-1 font-semibold">Weekly Sessions</h3>
+      <p class="mt-2 text-gray-600">Online, flexible scheduling.</p>
+    </li>
+  </ol>
 </section>
 
-<!-- Testimonials Section -->
-<section style="padding: 50px 20px; max-width: 800px; margin: auto;">
-  <h2>What Parents & Students Say</h2>
-  <blockquote style="font-style: italic; margin: 20px 0;">"After just a few sessions, my son’s confidence shot up and he started enjoying math again!" <br>— Jane, Toronto</blockquote>
-  <blockquote style="font-style: italic; margin: 20px 0;">"He explains concepts clearly and makes even hard topics feel manageable. Highly recommend!" <br>— David, Grade 11 Student</blockquote>
+<!-- TESTIMONIALS -->
+<section class="mt-16">
+  <h2 class="text-2xl font-bold">💬 Testimonials</h2>
+  <div class="mt-6 grid md:grid-cols-2 gap-6">
+    <blockquote class="rounded-2xl border bg-white p-6">
+      “Nicholas helped my daughter go from struggling in math to actually enjoying it. Her confidence has soared!”
+      <footer class="mt-3 text-sm text-gray-600">— Sarah, Toronto</footer>
+    </blockquote>
+    <blockquote class="rounded-2xl border bg-white p-6">
+      “The sessions are clear and engaging. My son improved a whole letter grade in just one semester.”
+      <footer class="mt-3 text-sm text-gray-600">— Ahmed, Mississauga</footer>
+    </blockquote>
+  </div>
 </section>
 
-<!-- CTA Section -->
-<section style="padding: 60px 20px; text-align: center; background-color: #e6f2ff;">
-  <h2>Ready to See Results?</h2>
-  <p>Let’s work together to help your child succeed in math.</p>
-  <a href="/contact" style="display: inline-block; margin-top: 20px; padding: 12px 25px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px;">Contact Me Today</a>
+<!-- FINAL CTA -->
+<section class="mt-16 mb-12 text-center">
+  <div class="rounded-2xl border bg-gradient-to-r from-brand-50 to-white p-10">
+    <h2 class="text-2xl md:text-3xl font-bold">📢 Ready to get started?</h2>
+    <p class="mt-2 text-gray-700">Spots for free consultations fill quickly each month.</p>
+    <a href="{{ url_for('contact') }}" class="mt-4 inline-flex items-center rounded-lg bg-brand-600 px-5 py-3 text-white hover:bg-brand-700">Book Your Free Consultation</a>
+  </div>
 </section>
 {% endblock %}

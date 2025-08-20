@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Services - Nicholas Kim Tutoring{% endblock %}
+
+{% block content %}
+<section class="mt-10">
+  <h1 class="text-3xl font-extrabold tracking-tight">Services</h1>
+  <p class="mt-4 text-gray-700 max-w-3xl">
+    I offer personalized math tutoring for students in Grades 6–12, following the Ontario curriculum. Each lesson is tailored to the student’s pace and goals.
+  </p>
+
+  <div class="mt-8 grid md:grid-cols-3 gap-6">
+    <div class="rounded-2xl border bg-white p-6">
+      <img src="https://placehold.co/600x360?text=Elementary+Math" class="rounded-xl w-full" alt="Elementary placeholder">
+      <h3 class="mt-4 font-semibold">Middle School (Grades 6–8)</h3>
+      <p class="mt-2 text-gray-600">Foundations, arithmetic, fractions, decimals, word problems.</p>
+    </div>
+
+    <div class="rounded-2xl border bg-white p-6">
+      <img src="https://placehold.co/600x360?text=High+School+Math" class="rounded-xl w-full" alt="High School placeholder">
+      <h3 class="mt-4 font-semibold">High School (Grades 9–12)</h3>
+      <p class="mt-2 text-gray-600">Algebra, functions, trigonometry, Advanced Functions, Calculus & Vectors.</p>
+    </div>
+
+    <div class="rounded-2xl border bg-white p-6">
+      <img src="https://placehold.co/600x360?text=Test+Prep" class="rounded-xl w-full" alt="Test Prep placeholder">
+      <h3 class="mt-4 font-semibold">Homework Help & Test Prep</h3>
+      <p class="mt-2 text-gray-600">Day-to-day support, strategy coaching, personalized schedule builder.</p>
+    </div>
+  </div>
+
+  <div class="mt-12 grid md:grid-cols-2 gap-6">
+    <div class="rounded-2xl border bg-white p-6">
+      <h3 class="font-semibold">Lesson Format</h3>
+      <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
+        <li><strong>Online (Ontario-wide):</strong> Zoom + iPad whiteboard for interactive learning.</li>
+      </ul>
+    </div>
+    <div class="rounded-2xl border bg-white p-6">
+      <h3 class="font-semibold">Rates</h3>
+      <p class="mt-2 text-gray-700">Discussed during the free consultation. No contracts — flexible, pay‑as‑you‑go sessions.</p>
+      <a href="{{ url_for('contact') }}" class="mt-4 inline-flex items-center rounded-lg bg-brand-600 px-5 py-3 text-white hover:bg-brand-700">Book a Free Consultation</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
