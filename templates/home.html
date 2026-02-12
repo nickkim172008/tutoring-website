@@ -14,7 +14,7 @@
       </p>
       <div class="mt-6 flex gap-3">
         <a href="{{ url_for('contact') }}" class="inline-flex items-center rounded-lg bg-brand-600 px-5 py-3 text-white hover:bg-brand-700">
-          📅 Book Your Free Consultation
+           Book Your Free Consultation
         </a>
         <a href="{{ url_for('services') }}" class="inline-flex items-center rounded-lg border px-5 py-3 hover:bg-gray-50">
           See Services
@@ -25,7 +25,7 @@
 
     <!-- Image placeholder -->
     <div class="relative">
-      <img src="https://placehold.co/800x520?text=Tutoring+Hero+Image" alt="Tutoring illustration placeholder" class="rounded-2xl border shadow-sm w-full" />
+      <img src= "{{ url_for('static', filename='images/james.jpg') }}" alt="Tutoring illustration placeholder" class="rounded-2xl border shadow-sm w-full" />
       <div class="absolute -bottom-4 -left-4 bg-white rounded-xl border shadow p-4 hidden md:block">
         <p class="text-sm font-semibold">Ontario Curriculum Aligned</p>
         <p class="text-xs text-gray-600">Grade 6 to 12</p>
@@ -37,14 +37,14 @@
 <!-- SERVICES SNAPSHOT -->
 <section class="mt-16 services py-12 bg-gray-50">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-2xl md:text-3xl font-bold text-center">📚 Services Snapshot</h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-center"> Services Snapshot</h2>
 
     <div class="mt-8 grid md:grid-cols-3 gap-8">
       <!-- Elementary Math -->
       <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition">
         <img src="{{ url_for('static', filename='images/elementary.png') }}" alt="Middle School Math" class="w-full h-48 object-cover">
         <div class="p-6">
-          <h3 class="text-lg font-semibold">📘 Middle School Math (Grades 6–8)</h3>
+          <h3 class="text-lg font-semibold"> Middle School Math (Grades 6–8)</h3>
           <p class="mt-2 text-gray-600">Build strong foundations & problem‑solving skills.</p>
         </div>
       </div>
@@ -53,7 +53,7 @@
       <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition">
         <img src="{{ url_for('static', filename='images/highschool.png') }}" alt="High School Math" class="w-full h-48 object-cover">
         <div class="p-6">
-          <h3 class="text-lg font-semibold">📐 High School Math (Grades 9–12)</h3>
+          <h3 class="text-lg font-semibold">High School Math (Grades 9–12)</h3>
           <p class="mt-2 text-gray-600">Algebra, functions, trigonometry, calculus & more.</p>
         </div>
       </div>
@@ -62,7 +62,7 @@
       <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition">
         <img src="{{ url_for('static', filename='images/homework.png') }}" alt="Homework Help & Test Prep" class="w-full h-48 object-cover">
         <div class="p-6">
-          <h3 class="text-lg font-semibold">📝 Homework Help & Test Prep</h3>
+          <h3 class="text-lg font-semibold"> Homework Help & Test Prep</h3>
           <p class="mt-2 text-gray-600">Exams and assignments.</p>
         </div>
       </div>
@@ -78,7 +78,7 @@
 
 <!-- HOW IT WORKS -->
 <section class="mt-16">
-  <h2 class="text-2xl font-bold">⚙️ How It Works</h2>
+  <h2 class="text-2xl font-bold"> How It Works</h2>
   <ol class="mt-6 grid md:grid-cols-3 gap-6">
     <li class="rounded-2xl border bg-white p-6">
       <span class="text-sm text-gray-500">Step 1</span>
@@ -100,15 +100,15 @@
 
 <!-- TESTIMONIALS -->
 <section class="mt-16">
-  <h2 class="text-2xl font-bold">💬 Testimonials</h2>
+  <h2 class="text-2xl font-bold"> Testimonials</h2>
   <div class="mt-6 grid md:grid-cols-2 gap-6">
     <blockquote class="rounded-2xl border bg-white p-6">
-      “Nicholas helped my daughter go from struggling in math to actually enjoying it. Her confidence has soared!”
-      <footer class="mt-3 text-sm text-gray-600">— Sarah, Toronto</footer>
+      “Nicholas helped my son (gr.9) and daughter (gr. 11)go from struggling in math to actually enjoying it. Their grades and confidence have soared!”
+      <footer class="mt-3 text-sm text-gray-600">— Joanna, Parent</footer>
     </blockquote>
     <blockquote class="rounded-2xl border bg-white p-6">
-      “The sessions are clear and engaging. My son improved a whole letter grade in just one semester.”
-      <footer class="mt-3 text-sm text-gray-600">— Ahmed, Mississauga</footer>
+      “I was failing Gr. 12 Advanced Functions until Nicholas taught me some techniques and built study schedules. I ended up with a 80% in the course and a passion for math. ”
+      <footer class="mt-3 text-sm text-gray-600">— Matthew, Student</footer>
     </blockquote>
   </div>
 </section>
@@ -116,7 +116,7 @@
 <!-- FINAL CTA -->
 <section class="mt-16 mb-12 text-center">
   <div class="rounded-2xl border bg-gradient-to-r from-brand-50 to-white p-10">
-    <h2 class="text-2xl md:text-3xl font-bold">📢 Ready to get started?</h2>
+    <h2 class="text-2xl md:text-3xl font-bold"> Ready to get started?</h2>
     <p class="mt-2 text-gray-700">Spots for free consultations fill quickly each month.</p>
     <a href="{{ url_for('contact') }}" class="mt-4 inline-flex items-center rounded-lg bg-brand-600 px-5 py-3 text-white hover:bg-brand-700">Book Your Free Consultation</a>
   </div>

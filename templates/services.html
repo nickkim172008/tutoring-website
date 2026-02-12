@@ -8,25 +8,34 @@
     I offer personalized math tutoring for students in Grades 6–12, following the Ontario curriculum. Each lesson is tailored to the student’s pace and goals.
   </p>
 
-  <div class="mt-8 grid md:grid-cols-3 gap-6">
-    <div class="rounded-2xl border bg-white p-6">
-      <img src="https://placehold.co/600x360?text=Elementary+Math" class="rounded-xl w-full" alt="Elementary placeholder">
-      <h3 class="mt-4 font-semibold">Middle School (Grades 6–8)</h3>
-      <p class="mt-2 text-gray-600">Foundations, arithmetic, fractions, decimals, word problems.</p>
-    </div>
+    <div class="mt-8 grid md:grid-cols-3 gap-8">
+      <!-- Elementary Math -->
+      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition">
+        <img src="{{ url_for('static', filename='images/elementary.png') }}" alt="Middle School Math" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold"> Middle School Math (Grades 6–8)</h3>
+          <p class="mt-2 text-gray-600">Foundations, arithmetic, fractions, decimals, word problems.</p>
+        </div>
+      </div>
 
-    <div class="rounded-2xl border bg-white p-6">
-      <img src="https://placehold.co/600x360?text=High+School+Math" class="rounded-xl w-full" alt="High School placeholder">
-      <h3 class="mt-4 font-semibold">High School (Grades 9–12)</h3>
-      <p class="mt-2 text-gray-600">Algebra, functions, trigonometry, Advanced Functions, Calculus & Vectors.</p>
-    </div>
+      <!-- High School Math -->
+      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition">
+        <img src="{{ url_for('static', filename='images/highschool.png') }}" alt="High School Math" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold">High School Math (Grades 9–12)</h3>
+          <p class="mt-2 text-gray-600">Algebra, functions, trigonometry, Advanced Functions, Calculus & Vectors.</p>
+        </div>
+      </div>
 
-    <div class="rounded-2xl border bg-white p-6">
-      <img src="https://placehold.co/600x360?text=Test+Prep" class="rounded-xl w-full" alt="Test Prep placeholder">
-      <h3 class="mt-4 font-semibold">Homework Help & Test Prep</h3>
-      <p class="mt-2 text-gray-600">Day-to-day support, strategy coaching, personalized schedule builder.</p>
+      <!-- Homework Help & Test Prep -->
+      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition">
+        <img src="{{ url_for('static', filename='images/homework.png') }}" alt="Homework Help & Test Prep" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold"> Day-to-day support, strategy coaching, personalized schedule builder, daily communication with parents</h3>
+          <p class="mt-2 text-gray-600">Exams and assignments.</p>
+        </div>
+      </div>
     </div>
-  </div>
 
   <div class="mt-12 grid md:grid-cols-2 gap-6">
     <div class="rounded-2xl border bg-white p-6">
