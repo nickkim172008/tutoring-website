@@ -330,6 +330,26 @@ a {
   box-shadow: var(--shadow);
 }
 
+@media (min-width: 1200px) and (min-aspect-ratio: 4 / 3) {
+  .hero {
+    width: min(1260px, calc(100% - 96px));
+    grid-template-columns: minmax(0, 0.95fr) minmax(460px, 1.05fr);
+    gap: 96px;
+  }
+
+  .hero-media {
+    justify-self: end;
+    width: 100%;
+    max-width: 600px;
+    min-height: 600px;
+    transform: translateY(-76px);
+  }
+
+  .hero-media img {
+    height: 610px;
+  }
+}
+
 .hero-stat,
 .hero-note {
   position: absolute;
