@@ -16,6 +16,11 @@ export function HomePage({ navigate }: Props) {
             One-on-one online math tutoring for Grades 6-12 across Ontario, built around
             clear explanations, steady practice, and a plan students can actually follow.
           </p>
+          <div className="hero-pills" aria-label="Tutoring highlights">
+            <span>Grades 6-12</span>
+            <span>Online across Ontario</span>
+            <span>AP Calculus 5/5</span>
+          </div>
           <div className="button-row">
             <button className="primary-button" onClick={() => navigate("contact")} type="button">
               Book Free Consultation
@@ -29,8 +34,12 @@ export function HomePage({ navigate }: Props) {
         <div className="hero-media">
           <img src="/images/james.jpg" alt="Student working through math tutoring material" />
           <div className="hero-stat">
-            <strong>200+ hours</strong>
+            <strong>250+ hours</strong>
             <span>of tutoring experience</span>
+          </div>
+          <div className="hero-note">
+            <span>100%</span>
+            <p>Advanced Functions and Calculus</p>
           </div>
         </div>
       </section>

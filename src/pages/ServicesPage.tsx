@@ -13,7 +13,8 @@ export function ServicesPage({ navigate }: Props) {
         <h1>Personalized math support for Grades 6-12.</h1>
         <p>
           Lessons follow the Ontario curriculum and adapt to the student&apos;s pace, goals,
-          current assignments, and confidence level.
+          current assignments, and confidence level, shaped by 250+ tutoring hours with
+          20+ students.
         </p>
       </section>
 
@@ -37,7 +38,8 @@ export function ServicesPage({ navigate }: Props) {
           <h2>Lesson Format</h2>
           <p>
             Online across Ontario using Zoom and an iPad whiteboard for interactive,
-            step-by-step lessons students can follow clearly.
+            step-by-step lessons students can follow clearly, backed by experience with
+            20+ learners.
           </p>
         </article>
         <article>

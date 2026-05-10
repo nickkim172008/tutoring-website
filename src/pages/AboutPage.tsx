@@ -16,8 +16,8 @@ export function AboutPage() {
             both Advanced Functions and Calculus, plus a 5/5 on the AP Calculus AB exam.
           </p>
           <p>
-            With over 200 hours of tutoring experience, I focus on making math clear and
-            approachable while building student confidence step by step.
+            With 250+ hours of experience tutoring 20+ students, I focus on making math
+            clear and approachable while building student confidence step by step.
           </p>
         </div>
         <div className="about-collage" aria-label="Nicholas outside academics">
