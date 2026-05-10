@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import emailjs from "@emailjs/browser";
 import type { Page } from "../types";
 
 type Props = {
@@ -17,6 +18,23 @@ const initialForm: ContactForm = {
   message: "",
 };
 
+const emailJsConfig = {
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  siteUrl: import.meta.env.VITE_PUBLIC_SITE_URL,
+  logoUrl: import.meta.env.VITE_EMAILJS_LOGO_URL,
+};
+
+const getAssetUrl = (path: string) => {
+  if (emailJsConfig.logoUrl) {
+    return emailJsConfig.logoUrl;
+  }
+
+  const siteUrl = emailJsConfig.siteUrl || window.location.origin;
+  return new URL(path, siteUrl).toString();
+};
+
 export function ContactPage({ navigate }: Props) {
   const [form, setForm] = useState<ContactForm>(initialForm);
   const [error, setError] = useState("");
@@ -26,7 +44,7 @@ export function ContactPage({ navigate }: Props) {
     setError("");
   };
 
-  const submit = (event: FormEvent<HTMLFormElement>) => {
+  const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!form.name.trim() || !form.message.trim()) {
@@ -34,14 +52,38 @@ export function ContactPage({ navigate }: Props) {
       return;
     }
 
-    const subject = encodeURIComponent(`New tutoring inquiry from ${form.name.trim()}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name.trim()}\nEmail: ${form.email.trim() || "(none provided)"}\n\n${form.message.trim()}`,
-    );
+    if (!emailJsConfig.serviceId || !emailJsConfig.templateId || !emailJsConfig.publicKey) {
+      setError("Email is not configured yet. Please use the direct email link below.");
+      console.error("Missing EmailJS environment variables.");
+      return;
+    }
 
-    window.location.href = `mailto:nicholaskim.tutoring@gmail.com?subject=${subject}&body=${body}`;
-    setForm(initialForm);
-    navigate("thanks");
+    const trimmedName = form.name.trim();
+    const trimmedEmail = form.email.trim();
+    const trimmedMessage = form.message.trim();
+
+    try {
+      await emailjs.send(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        {
+          name: trimmedName,
+          email: trimmedEmail || "(none provided)",
+          from_name: trimmedName,
+          from_email: trimmedEmail || "(none provided)",
+          reply_to: trimmedEmail,
+          message: trimmedMessage,
+          logo_url: getAssetUrl("/images/logo.png"),
+          site_name: "Ontario One2One Tutoring",
+        },
+        emailJsConfig.publicKey
+      );
+      setForm(initialForm);
+      navigate("thanks");
+    } catch (error) {
+      setError("Failed to send message. Please try again.");
+      console.error("EmailJS error:", error);
+    }
   };
 
   return (
