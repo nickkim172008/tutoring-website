@@ -22,17 +22,6 @@ const emailJsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
   publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-  siteUrl: import.meta.env.VITE_PUBLIC_SITE_URL,
-  logoUrl: import.meta.env.VITE_EMAILJS_LOGO_URL,
-};
-
-const getAssetUrl = (path: string) => {
-  if (emailJsConfig.logoUrl) {
-    return emailJsConfig.logoUrl;
-  }
-
-  const siteUrl = emailJsConfig.siteUrl || window.location.origin;
-  return new URL(path, siteUrl).toString();
 };
 
 export function ContactPage({ navigate }: Props) {
@@ -73,8 +62,6 @@ export function ContactPage({ navigate }: Props) {
           from_email: trimmedEmail || "(none provided)",
           reply_to: trimmedEmail,
           message: trimmedMessage,
-          logo_url: getAssetUrl("/images/logo.png"),
-          site_name: "Ontario One2One Tutoring",
         },
         emailJsConfig.publicKey
       );
@@ -92,7 +79,7 @@ export function ContactPage({ navigate }: Props) {
         <p className="eyebrow">Contact</p>
         <h1>Book a free consultation.</h1>
         <p>
-          Send a quick note with the grade, course, and what feels hardest right now.
+          Send a quick note with the grade, course, and weak points.
           Nicholas will get back to you shortly.
         </p>
 
