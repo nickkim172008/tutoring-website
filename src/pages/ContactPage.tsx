@@ -126,7 +126,7 @@ export function ContactPage({ navigate }: Props) {
         <img src="/images/headshot.png" alt="Nicholas Kim" />
         <div>
           <h2>Availability</h2>
-          <p>Evenings and weekends. Online across Ontario.</p>
+          <p>Evenings and weekends.</p>
         </div>
         <div>
           <h2>Direct Contact</h2>

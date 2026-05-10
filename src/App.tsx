@@ -7,7 +7,7 @@ import { ThanksPage } from "./pages/ThanksPage";
 import type { Page } from "./types";
 
 const pageTitles: Record<Page, string> = {
-  home: "Ontario One2One Tutoring",
+  home: "One2One Tutoring",
   about: "About Nicholas Kim",
   services: "Tutoring Services",
   contact: "Book a Free Consultation",
@@ -39,8 +39,7 @@ export default function App() {
           <button className="brand" onClick={() => navigate("home")} type="button">
             <img src="/images/logo.png" alt="" />
             <span>
-              <strong>Ontario One2One</strong>
-              <small>Tutoring</small>
+              <strong>One2One Tutoring</strong>
             </span>
           </button>
 
@@ -99,7 +98,7 @@ export default function App() {
           <div>
             <div className="footer-brand">
               <img src="/images/logo.png" alt="" />
-              <span>Ontario One2One Tutoring</span>
+              <span>One2One Tutoring</span>
             </div>
             <p>One-on-one math tutoring for Grades 6-12 across Ontario.</p>
           </div>
@@ -115,7 +114,7 @@ export default function App() {
             <a href="mailto:nicholaskim.tutoring@gmail.com">nicholaskim.tutoring@gmail.com</a>
             <a href="tel:+16476124140">+1 (647) 612-4140</a>
             <p>Etobicoke. Online across Ontario.</p>
-            <p className="copyright">Copyright {year} Ontario One2One Tutoring</p>
+            <p className="copyright">Copyright {year} One2One Tutoring</p>
           </div>
         </div>
       </footer>

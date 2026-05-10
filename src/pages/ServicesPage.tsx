@@ -37,9 +37,8 @@ export function ServicesPage({ navigate }: Props) {
         <article>
           <h2>Lesson Format</h2>
           <p>
-            Online across Ontario using Zoom and an iPad whiteboard for interactive,
-            step-by-step lessons students can follow clearly, backed by experience with
-            20+ learners.
+            In-person in Etobicoke or Online using Zoom and an iPad whiteboard. Lessons are interactive,andbacked by experience with
+            20+ students.
           </p>
         </article>
         <article>

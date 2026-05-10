@@ -1,4 +1,4 @@
-# Ontario One2One Tutoring
+# One2One Tutoring
 
 React and TypeScript version of the tutoring website.
 

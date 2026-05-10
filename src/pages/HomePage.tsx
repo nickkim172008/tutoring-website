@@ -1,4 +1,3 @@
-import { services } from "../data";
 import type { Page } from "../types";
 
 type Props = {
@@ -18,8 +17,8 @@ export function HomePage({ navigate }: Props) {
           </p>
           <div className="hero-pills" aria-label="Tutoring highlights">
             <span>Grades 6-12</span>
+            <span>In person in Etobicoke</span>
             <span>Online across Ontario</span>
-            <span>AP Calculus 5/5</span>
           </div>
           <div className="button-row">
             <button className="primary-button" onClick={() => navigate("contact")} type="button">
@@ -41,25 +40,6 @@ export function HomePage({ navigate }: Props) {
             <span>100%</span>
             <p>Advanced Functions and Calculus</p>
           </div>
-        </div>
-      </section>
-
-      <section className="container section">
-        <div className="section-heading">
-          <p className="eyebrow">Services snapshot</p>
-          <h2>Support for the exact math moment students are in.</h2>
-        </div>
-        <div className="card-grid">
-          {services.map((service) => (
-            <article className="service-card" key={service.title}>
-              <img src={service.image} alt={service.alt} />
-              <div>
-                <span>{service.grades}</span>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-            </article>
-          ))}
         </div>
       </section>
 

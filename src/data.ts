@@ -13,7 +13,7 @@ export const services: Service[] = [
     title: "High School Math",
     grades: "Grades 9-12",
     description:
-      "Algebra, functions, trigonometry, Advanced Functions, Calculus and Vectors, and course-specific review.",
+      "Algebra, functions, trigonometry, Advanced Functions, Calculus & Vectors, and course-specific review.",
     image: "/images/highschool.png",
     alt: "High school math tutoring",
   },
@@ -37,6 +37,11 @@ export const faqs: Faq[] = [
     question: "Do you offer online sessions?",
     answer:
       "Yes. Sessions run online using Zoom and an iPad whiteboard so students can see each step clearly and ask questions in real time.",
+  },
+   {
+    question: "Do you offer in-person sessions?",
+    answer:
+      "Yes. But typically only for students in Etobicoke. Can be discussed during the consultation",
   },
   {
     question: "How do payments work?",
